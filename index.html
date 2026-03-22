@@ -4,146 +4,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clone of mintra</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    body {
-        text-align: center;
-        
-    }
 
-    .btn {
-        height: 100px;
-        width: 100px;
-        border-radius: 20px;
-        
-        border: 10px solid black;
-        margin: 2.5rem;
-
-        
-    }
-
-    .btn-container {
-        display: flex;
-       
-        justify-content: center;
-       
-      
-        
-
-    }
-    .red {
-        background-color: red;
-    }
-    .green {
-        background-color: green;
-    }
-    .yellow {
-        background-color: yellow;
-    }
-    .purple {
-        background-color: purple;
-    }
-
-    .flash{
-        background-color: white;
-        transition: 0.5s;
-    }
-    
-</style>
 
 <body>
-    <h1>simon-says game </h1>
-    <h2>Press any key to start the game</h2>
-    <div class="btn-container">
+    <header>
+        <div id="logo">
+            <img src="Myntra-logo.png" alt="" id="myntra_logo
+            " style="height: 53px; width: auto; padding: 4px;">
 
+        </div>
+        
+        <nav>
 
-<div class="line-one">
- <div class="btn red" type="button">1</div>
- <div class="btn green"type="button">2</div>
+<div class="anchore">
+            <a href="MEN"></a><b>MEN</b>
+            <a href="WOMEN"></a><b>WOMEN</b>
+            <a href="KIDS"></a><B>KIDS</B>
+            <a href="HOME"></a><b>HOME</b>
+            <a href="BEAUTY"></a><b>BEAUTY</b>
+            <a href="GENZ"></a><b>GEN</b>
+            <a href="STUDIO"></a><b>STUDIO</b>
 </div>
-       <div class="line-two ">
-        <div class="btn yellow" type="button">3</div>
-        <div class="btn purple" type="button">4</div>
 
-       </div>
-       </div>
+            <div id="search"><img src="search.png" alt="" style="height: 25px; width: auto; padding: 1.5px;"></div>
 
-       <script>
-        
-         let gameSeq = [];
-         let userSeq = [];
-         let started = false;
-
-         let btns = ["yellow", "red", "green", "purple"];
-
-         let level = 0;
-         let h2 = document.querySelector("h2");
-
-    //    <!--  false mean game is not started -->
-
-       document.addEventListener("keypress", function () {
-        console.log("Game started");
-        if (started == false) {
-           console.log("Game started");
-            started = true;
-            levelUp();
-
-        }
-        
-       });
-       
-       function gameFlash(btn){
-        btn.classList.add("flash");
-        setTimeout(function(){
-            btn.classList.remove("flash");
-        }, 500);
-
-         function userflash(btn){
-        btn.classList.add("userflash");
-        setTimeout(function(){
-            btn.classList.remove("userflash");
-        }, 250);
-
-
-       }
-       function levelUp(){
-        level++;
-        h2.innerHTML = `Level ${level}`;
-        
-        let randIdx = Math.floor(Math.random() * 3);
-        let randColor = btns[randIdx];
-        let randbtn = document.querySelector(`.${randColor}`);
-
-        console.log(randColor);
-        console.log(randIdx);
-        console.log(randbtn);
-        gameFlash(randbtn);
+            <div class="profile"><img src="user.png" alt="" style="width: 40px; height: 25px; padding: 0px;">
+                <p><b style="padding: 0px, 5px, 0px, 5px;">Profile</b></p>
+            </div>
 
 
 
-       }
-       function btnPress(){
-        let btn = this;
-        userFlash(btn);
-        console.log(this);
-
-       }
-
-       let allBtns = document.querySelectorAll(".btn");
-       for(btn of allBtns){
-       btn.addEventListener("click", btnPress);
-       }
-
-       .userflash {
-        background-color: white;
-        transition: 0.5s;
-        }
 
 
 
-       
 
-  </script>
+
+        </nav>
+    </header>
+    <div class="main">
+        <!-- <aside>
+            <div class="section1"></div>
+            <div class="section2"></div>
+        </aside> -->
+        <div class="section">
+            <div class="article1" id="article-box"><div class="image-box"><img src="image1.webp" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+            <div class="article2" id="article-box"><div class="image-box"><img src="image2.webp" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+            <div class="article3" id="article-box"><div class="image-box"><img src="image3.webp" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+            <div class="article4" id="article-box"><div class="image-box"><img src="image4.webp" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+            <div class="article5" id="article-box"><div class="image-box"><img src="image5.webp" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+            <div class="article6" id="article-box"><div class="image-box"><img src="image6.webp" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+            <div class="article7" id="article-box"><div class="image-box"><img src="image7.webp" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+            <div class="article8" id="article-box"><div class="image-box"><img src="image8.webp" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+
+<div class="article1" id="article-box"><div class="image-box"><img src="https://www.jiomart.com/images/product/original/rv9owzda2l/homedex-water-bottle-with-straw-and-handle-transparent-tumbler-ice-cream-insulated-bottle-leak-proof-sports-and-gym-fitness-shaker-bottle-1300ml-tumbler-for-outdoor-activities-gym-camping-tea-infuser-product-images-orv9owzda2l-p612484218-0-202509181610.jpg?im=Resize=(280,280)" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+            <div class="article2" id="article-box"><div class="image-box"><img src="https://www.jiomart.com/images/product/original/491208644/garnier-black-naturals-ammonia-free-hair-colour-original-black-20-g-20-ml-product-images-o491208644-p491208644-0-202404100902.jpg?im=Resize=(1000,1000)" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+            <div class="article3" id="article-box"><div class="image-box"><img src="https://www.jiomart.com/images/product/original/491638600/alive-craft-rk-ceramics-kullhad-220-ml-product-images-o491638600-p609134756-0-202405291637.jpg?im=Resize=(420,420)" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+            <div class="article4" id="article-box"><div class="image-box"><img src="https://www.jiomart.com/images/product/original/490107723/vega-mehndi-dye-brush-and-comb-2-pcs-mb-01-product-images-o490107723-p490107723-0-202203150549.jpg?im=Resize=(280,280)" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+            <div class="article5" id="article-box"><div class="image-box"><img src="https://www.jiomart.com/images/product/original/491349163/himalaya-lip-care-balm-rich-cocoa-butter-4-5-g-product-images-o491349163-p590087375-0-202503261617.jpg?im=Resize=(420,420)" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+            <div class="article6" id="article-box"><div class="image-box"><img src="https://www.jiomart.com/images/product/original/490782403/himalaya-baby-massage-oil-200-ml-product-images-o490782403-p490782403-0-202203141914.jpg?im=Resize=(280,280)" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+            <div class="article7" id="article-box"><div class="image-box"><img src="https://www.jiomart.com/images/product/original/rv2ttsniqf/bullmer-trendy-clothing-set-with-oversized-t-shirt-pants-co-ords-for-men-product-images-rv2ttsniqf-0-202407312055.jpg?im=Resize=(280,280)" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+            <div class="article8" id="article-box"><div class="image-box"><img src="https://www.jiomart.com/images/product/original/443091684_charcoal/men-graphic-print-relaxed-fit-crew-neck-t-shirt-model-443091684_charcoal-0-202511200340.jpg?im=Resize=(280,280)" alt=""></div><div class="product-card">
+    <p class="product-title">Girls Printed Sling Bag with Detachable Strap</p>
+    
+    <div class="price-section">
+        <span class="current-price">₹239.00</span>
+        <span class="original-price">₹799.00</span>
+        <span class="discount">70% OFF</span>
+    </div>
+</div></div>
+
+        </div>
+    </div>
+    <footer>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <h4>ONLINE SHOPPING</h4>
+      <ul>
+        <li>Men</li>
+        <li>Women</li>
+        <li>Kids</li>
+        <li>Home</li>
+        <li>Beauty</li>
+        <li>Genz</li>
+        <li>Gift Cards</li>
+        <li>Myntra Insider</li>
+      </ul>
+
+      <h4 class="mt">USEFUL LINKS</h4>
+      <ul>
+        <li>Blog</li>
+      </ul>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+      <h4>CUSTOMER POLICIES</h4>
+      <ul>
+        <li>Contact Us</li>
+        <li>FAQ</li>
+        <li>T&C</li>
+        <li>Terms Of Use</li>
+        <li>Track Orders</li>
+        <li>Shipping</li>
+        <li>Cancellation</li>
+        <li>Privacy policy</li>
+        <li>Grievance Redressal</li>
+        <li>FSSAI Food Safety</li>
+        <li>Connect app</li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+      <h4>EXPERIENCE MYNTRA APP ON MOBILE</h4>
+      <div class="app-links">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+      </div>
+
+      <h4 class="mt">KEEP IN TOUCH</h4>
+      <div class="social-icons">
+        <span>📘</span>
+        <span>🐦</span>
+        <span>▶️</span>
+        <span>📸</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+    </footer>
+
 </body>
+
 </html>
