@@ -5,22 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .calculatore-Box{
+            background-color: aqua;
+            height: 500px;
+            width: 300px;
+            border-radius: 8px;
+            margin-top: 20px;
+            padding: 1%;
+
+
+
+        }
+
+        
+
+        #display{
+            height: 70px;
+            width: 96%;
+           
+            margin-bottom: 10%;
+            border-radius: 8px;
+
+
+        }
+        
+
+        button{
+            height: 70px;
+            width: 65px;
+            border-radius: 8px;
+            margin: 1%;
+        
+
+        }
+
+        button:hover {
+  background-color: red;
+  color: white;
+  height: 65px;
+  width: 60px;
+  border: 10px solid bisque;
+  
+}
+.formula{
+
+     height: 80px;
+            width: 96%;
+           
+            margin: 4px;
+            border-radius: 8px;
+            background-color: white;
+            border: 2px solid black;
+
+
+}
+
+
+    </style>
 </head>
 <body>
-    <div class = "topnav" id = "myTopnov">
-        <h3>BrainStation</h3>
-        <a href="#home" class = "active">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
 
-         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-        
+    <div class ="calculatore-Box">
+        <input type="text" id="display">
+
+        <button onclick="add('1')">1</button>
+        <button onclick="add('2')">2</button>
+        <button onclick="add('3')">3</button>
+        <button onclick="add('+')">+</button>
+
+        <button onclick="add('4')">4</button>
+        <button onclick="add('5')">5</button>
+        <button onclick="add('6')">6</button>
+        <button onclick="add('-')">-</button>
+
+        <button onclick="add('7')">7</button>
+        <button onclick="add('8')">8</button>
+        <button onclick="add('9')">9</button>
+        <button onclick="add('*')">*</button>
+
+         <button onclick="clearDisplay()">C</button>
+  <button onclick="add('0')">0</button>
+  <button onclick="calculate()">=</button>
+  <button onclick="add('/')">/</button>
+
+  <div class="formula">
+<small>note -</small>
+  </div>
+
     </div>
-
+    
+    
     
 </body>
+<script>
+   
+    let display = document.getElementById("display");
+
+function add(value) {
+  display.value += value;
+}
+
+function clearDisplay() {
+  display.value = "";
+}
+
+function calculate() {
+  display.value = eval(display.value);
+}
+
+let note = document.getElementsByTagName("small");
+note.append
+
+</script>
 </html>
